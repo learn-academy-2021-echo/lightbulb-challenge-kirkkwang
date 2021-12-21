@@ -1,7 +1,3 @@
-* {
-  box-sizing: border-box;
-  font-family: "Arial";
-}
 body {
   display: flex;
   flex-direction: column;
@@ -9,19 +5,14 @@ body {
   align-items: center;
   height: 100vh;
   margin: 0;
-  transition: background 0.2s linear;
+  transition: background 0.1s linear;
   color: #fff;
   background-color: #292c35;
-  opacity: 70%;
-}
-
-body.light {
-  background-color: #fff;
-  color: #111;
 }
 
 .head {
   text-align: center;
+  opacity: 70%;
 }
 
 .content {
@@ -31,7 +22,7 @@ body.light {
   align-items: center;
   height: 100vh;
   margin: 0;
-  transition: background 0.2s linear;
+  transition: background 0.1s linear;
 }
 
 .light-and-switch {
@@ -58,11 +49,11 @@ body.light {
   padding: 7px;
   height: 26px;
   width: 50px;
-  transform: rotate(90deg) scale(2);
+  transform: rotate(-90deg) scale(2);
 }
 
 .switch {
-  background-color: #f1c40f;
+  background-color: #fff;
   border-radius: 5px;
   position: absolute;
   text-align: center;
@@ -73,10 +64,12 @@ body.light {
   width: 22px;
   font-size: 7px;
   transform: rotate(-90deg);
-  transition: transform 0.2s linear;
+  transition: transform 0.15s linear;
+  opacity: 70%;
 }
 
 .checkbox:checked + .label .switch {
   transform: rotate(-90deg) translateY(24px);
-  background-color: white;
+  background-color: #f1c40f;
+  opacity: 100%;
 }
