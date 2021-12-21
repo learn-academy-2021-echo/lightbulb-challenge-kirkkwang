@@ -1,17 +1,16 @@
 import React, { Component } from "react";
 import Square from "./components/Square";
+import LightSwitch from "./components/LightSwitch";
 import "./App.css";
 
-class App extends Component {
+export default class App extends Component {
   render() {
     return (
       <>
-        <h1 class="content">Flip the Light Switch On and Off</h1>
-        <div class="content">
-          <Square />
-        </div>
+        <h1 className="head">Flip the Light Switch On and Off</h1>
+        {/* used the new LightSwitch component instead of original Square component */}
+        <LightSwitch />
       </>
     );
   }
 }
-export default App;
