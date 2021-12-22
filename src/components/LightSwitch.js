@@ -3,6 +3,7 @@
 // - User story: When the light switch is "off" I see a white (unlit) lightbulb. When I turn the switch "on" I see a yellow (lit) lightbulb. √
 
 import React, { Component } from "react";
+import "./LightSwitch.css";
 
 export default class LightSwitch extends Component {
   // exports and creates class syntax
@@ -31,29 +32,29 @@ export default class LightSwitch extends Component {
   render() {
     return (
       <>
-        <div className="content">
-          <div className="light-and-switch">
-            {/* this is the tag for the SVG lightbulb files, attributes in the lightBulbFill and vector arrays, which is fill= and d= */}
-            <svg
-              className="light-off"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-            >
-              <path
-                fill={this.state.lightBulbFill[this.state.index]}
-                d={this.state.vector[this.state.index]}
-              />
-            </svg>
-            <input type="checkbox" className="checkbox" id="checkbox" />
-            <label
-              htmlFor="checkbox"
-              className="label"
-              onClick={this.changeIndex}
-            >
-              <div className="switch" id="switch"></div>
-            </label>
-          </div>
-        </div>
+        {/* <span className="bulb-switch-container"> */}
+        <span className="light-and-switch">
+          {/* this is the tag for the SVG lightbulb files, attributes in the lightBulbFill and vector arrays, which is fill= and d= */}
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path
+              fill={this.state.lightBulbFill[this.state.index]}
+              d={this.state.vector[this.state.index]}
+            />
+          </svg>
+          <input type="checkbox" className="checkbox" id="checkbox" />
+          <label
+            htmlFor={this.state.index === 0 ? "label-off" : "label-on"}
+            className="label"
+            onClick={this.changeIndex}
+          >
+            <div
+              className={
+                this.state.index === 0 ? "LightSwitch-off" : "LightSwitch-on"
+              }
+            ></div>
+          </label>
+        </span>
+        {/* </span> */}
       </>
     );
   }
