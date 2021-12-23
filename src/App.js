@@ -8,7 +8,7 @@ export default class App extends Component {
   render() {
     return (
       <>
-        <h1 className="head">Flip the Light Switch On and Off</h1>
+        <h1 className="head">Go Crazy With Lightbulbs!</h1>
         {/* used the new LightSwitch component instead of original Square component */}
         <AddRemove />
       </>

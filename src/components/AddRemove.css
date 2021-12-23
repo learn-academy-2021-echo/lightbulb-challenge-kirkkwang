@@ -8,18 +8,18 @@
 
 .add-bulb,
 .remove-bulb {
-  width: 150px;
-  height: 40px;
-  margin: 2px;
-  font-size: larger;
-  background-color: #fff;
+  width: 90px;
+  height: 60px;
+  margin: 3px;
+  font-size: 32px;
+  background-color: rgb(141, 141, 141);
   border: 0px;
-  opacity: 70%;
+  border-radius: 15px;
 }
 
 .add-bulb:hover,
 .remove-bulb:hover {
-  opacity: 100%;
+  background-color: #fff;
 }
 
 .add-bulb:active,

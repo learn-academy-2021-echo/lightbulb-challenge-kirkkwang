@@ -31,10 +31,10 @@ export default class AddRemove extends Component {
         {/* buttons added */}
         <div className="buttons">
           <button className="add-bulb" onClick={this.addBulbs}>
-            Add Bulb
+            ➕ 💡
           </button>
           <button className="remove-bulb" onClick={this.removeBulbs}>
-            Remove Bulb
+            ➖ 💡
           </button>
         </div>
         {/* displays all the LightSwitch components in allLights array */}
