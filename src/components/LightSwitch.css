@@ -1,10 +1,15 @@
-.light-and-switch {
+:root {
+  --light-bulb-glow-height: 40px;
+  --bulb-yellow: #ffe065;
+}
+
+.light-and-switch-span {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 200px;
   height: 325px;
-  margin-top: 50px;
+  margin-bottom: 40px;
 }
 
 .checkbox {
@@ -43,7 +48,7 @@
 }
 
 .LightSwitch-on {
-  background-color: #f1c40f;
+  background-color: var(--bulb-yellow);
   border-radius: 10px;
   position: relative;
   text-align: center;
@@ -58,29 +63,30 @@
 }
 
 .LightSwitch-on:hover {
-  background-color: #ffe065;
+  background-color: var(--bulb-yellow);
+  filter: brightness(1.25);
 }
 
 .bulb:hover {
-  background-color: #ffe065;
+  background-color: var(--bulb-yellow);
 }
 
 .light-bulb-glow-on {
   position: relative;
   top: 110px;
   width: 10px;
-  height: 40px;
+  height: var(--light-bulb-glow-height);
   border-radius: 50%;
   background-color: #fff;
-  box-shadow: 0 0 60px 30px #ffe065, 0 0 100px 60px #ffe065,
-    0 0 140px 90px #ffe065;
+  box-shadow: 0 0 60px 30px var(--bulb-yellow),
+    0 0 100px 60px var(--bulb-yellow), 0 0 140px 90px var(--bulb-yellow);
   filter: blur(5px) brightness(1.5);
   animation: flicker 0.5s linear;
   z-index: 3;
 }
 
 .light-bulb-glow-off {
-  height: 40px;
+  height: var(--light-bulb-glow-height);
 }
 
 .bulb-svg {

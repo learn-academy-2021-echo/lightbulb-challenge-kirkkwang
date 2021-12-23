@@ -28,7 +28,7 @@ export default class LightSwitch extends Component {
   render() {
     return (
       <>
-        <span className="light-and-switch">
+        <span className="light-and-switch-span">
           {/* this is the tag for the SVG lightbulb files, attributes in the lightBulbFill and vector arrays, which is fill= and d= */}
           {/* this is the glow div vvv */}
           <div
@@ -52,12 +52,12 @@ export default class LightSwitch extends Component {
           <label
             htmlFor={this.state.index === 0 ? "label-off" : "label-on"}
             className="label"
-            onClick={this.changeIndex}
           >
             <div
               className={
                 this.state.index === 0 ? "LightSwitch-off" : "LightSwitch-on"
               }
+              onClick={this.changeIndex}
             ></div>
           </label>
         </span>

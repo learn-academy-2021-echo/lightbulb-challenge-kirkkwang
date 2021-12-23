@@ -8,9 +8,10 @@
 
 .add-bulb,
 .remove-bulb {
-  width: 100px;
-  height: 25px;
+  width: 150px;
+  height: 40px;
   margin: 2px;
+  font-size: larger;
   background-color: #fff;
   border: 0px;
   opacity: 70%;
@@ -18,7 +19,7 @@
 
 .add-bulb:hover,
 .remove-bulb:hover {
-  opacity: 55%;
+  opacity: 100%;
 }
 
 .add-bulb:active,
