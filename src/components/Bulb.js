@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import "./Bulb.css";
 
 export default class Bulb extends Component {
   render() {
@@ -20,7 +19,7 @@ export default class Bulb extends Component {
                   backgroundColor: "#fff",
                   boxShadow: `0 0 60px 30px ${this.props.randomColor}, 0 0 100px 60px ${this.props.randomColor}, 0 0 140px 90px ${this.props.randomColor}`,
                   filter: "blur(5px) brightness(1.5)",
-                  animation: "flicker 0.5s linear",
+                  animation: "flicker 0.3s linear",
                   zIndex: "3",
                 }
           }
