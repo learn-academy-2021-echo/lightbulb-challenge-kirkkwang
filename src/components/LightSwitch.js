@@ -50,6 +50,7 @@ export default class LightSwitch extends Component {
             <div
               onClick={this.changeIndex}
               className="light-switch"
+              // for individual
               style={
                 this.state.index === 0
                   ? {
