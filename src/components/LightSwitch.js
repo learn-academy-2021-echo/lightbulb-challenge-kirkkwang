@@ -65,13 +65,15 @@ export default class LightSwitch extends Component {
           />
           <div htmlFor="checkbox" className="light-switch-track">
             {/* used div instead of label to separate click functionality */}
-            <input
-              type="checkbox"
-              class="checkbox"
-              id="checkbox"
-              defaultChecked={this.state.index}
-              onChange={this.changeIndex}
-            />
+            <label htmlFor="checkbox">
+              <input
+                type="checkbox"
+                class="checkbox"
+                id="checkbox"
+                defaultChecked={this.state.index}
+                onChange={this.changeIndex}
+              />
+            </label>
             <div
               onClick={this.changeIndex}
               className="light-switch"
