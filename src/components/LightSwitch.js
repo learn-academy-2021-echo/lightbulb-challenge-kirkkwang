@@ -38,6 +38,22 @@ export default class LightSwitch extends Component {
   };
 
   render() {
+    // moved styling into variable so return is cleaner
+    let lightSwitchStyle = {
+      backgroundColor: `${this.state.randomColor}`,
+      borderRadius: "10px",
+      position: "relative",
+      textAlign: "center",
+      lineHeight: "44px",
+      bottom: this.state.index === 0 ? "-22px" : "10px",
+      right: "10px",
+      height: "44px",
+      width: "44px",
+      fontSize: "7px",
+      opacity: this.state.index === 0 ? "20%" : "100%",
+      transition: "bottom .3s, opacity .3s",
+    };
+
     return (
       <>
         <span className="light-and-switch-span">
@@ -47,34 +63,21 @@ export default class LightSwitch extends Component {
             randomColor={this.state.randomColor}
             lightBulbFill={this.state.lightBulbFill}
           />
-          <label htmlFor="checkbox" className="light-switch-track">
+          <div htmlFor="checkbox" className="light-switch-track">
+            {/* used div instead of label to separate click functionality */}
             <input
               type="checkbox"
               class="checkbox"
               id="checkbox"
-              // defaultChecked={this.state.index}
-              // onChange={this.changeIndex}
+              defaultChecked={this.state.index}
+              onChange={this.changeIndex}
             />
             <div
               onClick={this.changeIndex}
               className="light-switch"
-              // for individual
-              style={{
-                backgroundColor: `${this.state.randomColor}`,
-                borderRadius: "10px",
-                position: "relative",
-                textAlign: "center",
-                lineHeight: "44px",
-                bottom: this.state.index === 0 ? "-22px" : "10px",
-                right: "10px",
-                height: "44px",
-                width: "44px",
-                fontSize: "7px",
-                opacity: this.state.index === 0 ? "20%" : "100%",
-                transition: "bottom .3s, opacity .3s",
-              }}
+              style={lightSwitchStyle}
             ></div>
-          </label>
+          </div>
         </span>
       </>
     );
