@@ -8,6 +8,7 @@ import "./LightSwitch.css";
 
 export default class LightSwitch extends Component {
   // exports and creates class syntax
+
   constructor(props) {
     super(props);
     this.state = {
@@ -22,7 +23,7 @@ export default class LightSwitch extends Component {
   changeColor = () => {
     let color = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
     this.setState({
-      randomColor: true ? color : this.state.randomColor,
+      randomColor: color,
     });
   };
 
@@ -46,40 +47,34 @@ export default class LightSwitch extends Component {
             randomColor={this.state.randomColor}
             lightBulbFill={this.state.lightBulbFill}
           />
-          <div className="light-switch-track">
+          <label htmlFor="checkbox" className="light-switch-track">
+            <input
+              type="checkbox"
+              class="checkbox"
+              id="checkbox"
+              // defaultChecked={this.state.index}
+              // onChange={this.changeIndex}
+            />
             <div
               onClick={this.changeIndex}
               className="light-switch"
               // for individual
-              style={
-                this.state.index === 0
-                  ? {
-                      backgroundColor: `${this.state.randomColor}`,
-                      borderRadius: "10px",
-                      position: "relative",
-                      textAlign: "center",
-                      lineHeight: "44px",
-                      top: "22px",
-                      right: "10px",
-                      height: "44px",
-                      width: "44px",
-                      fontSize: "7px",
-                      opacity: "20%",
-                    }
-                  : {
-                      backgroundColor: `${this.state.randomColor}`,
-                      borderRadius: "10px",
-                      position: "relative",
-                      bottom: "10px",
-                      right: "10px",
-                      height: "44px",
-                      width: "44px",
-                      fontSize: "7px",
-                      opacity: "100%",
-                    }
-              }
+              style={{
+                backgroundColor: `${this.state.randomColor}`,
+                borderRadius: "10px",
+                position: "relative",
+                textAlign: "center",
+                lineHeight: "44px",
+                bottom: this.state.index === 0 ? "-22px" : "10px",
+                right: "10px",
+                height: "44px",
+                width: "44px",
+                fontSize: "7px",
+                opacity: this.state.index === 0 ? "20%" : "100%",
+                transition: "bottom .3s, opacity .3s",
+              }}
             ></div>
-          </div>
+          </label>
         </span>
       </>
     );
