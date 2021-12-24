@@ -20,7 +20,7 @@ export default class AddRemove extends Component {
 
   // created function for removing bulbs that pops a LightSwitch component from allLights array
   removeBulbs = () => {
-    let arr = [...this.state.allLights];
+    let arr = this.state.allLights;
     arr.pop();
     this.setState({ allLights: arr });
   };
