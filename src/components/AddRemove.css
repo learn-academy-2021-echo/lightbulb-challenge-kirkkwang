@@ -1,0 +1,28 @@
+.multi-bulbs,
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.add-bulb,
+.remove-bulb {
+  width: 90px;
+  height: 60px;
+  margin: 3px;
+  font-size: 32px;
+  background-color: rgb(141, 141, 141);
+  border: 0px;
+  border-radius: 15px;
+}
+
+.add-bulb:hover,
+.remove-bulb:hover {
+  background-color: #fff;
+}
+
+.add-bulb:active,
+.remove-bulb:active {
+  opacity: 80%;
+}

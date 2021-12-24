@@ -1,0 +1,115 @@
+:root {
+  --light-bulb-glow-height: 40px;
+  --bulb-yellow: #ffe065;
+}
+
+.light-and-switch-span {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 250px;
+}
+
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+.light-switch-track {
+  background-color: #111;
+  border-radius: 14px;
+  margin-top: 30px;
+  padding: 14px;
+  height: 84px;
+  width: 52px;
+  z-index: 2;
+}
+
+.LightSwitch-off {
+  background-color: #fff;
+  border-radius: 10px;
+  position: relative;
+  text-align: center;
+  line-height: 44px;
+  top: 22px;
+  right: 10px;
+  height: 44px;
+  width: 44px;
+  font-size: 7px;
+  opacity: 70%;
+}
+
+.LightSwitch-off:hover {
+  opacity: 90%;
+}
+
+.LightSwitch-on {
+  background-color: var(--bulb-yellow);
+  border-radius: 10px;
+  position: relative;
+  bottom: 10px;
+  right: 10px;
+  height: 44px;
+  width: 44px;
+  font-size: 7px;
+  opacity: 100%;
+}
+
+.LightSwitch-on:hover {
+  background-color: var(--bulb-yellow);
+  filter: brightness(1.25);
+}
+
+.light-bulb-glow-on {
+  position: relative;
+  top: 130px;
+  width: 10px;
+  height: var(--light-bulb-glow-height);
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0 0 60px 30px var(--bulb-yellow),
+    0 0 100px 60px var(--bulb-yellow), 0 0 140px 90px var(--bulb-yellow);
+  filter: blur(5px) brightness(1.5);
+  animation: flicker 0.5s linear;
+  z-index: 3;
+}
+
+.light-bulb-glow-off {
+  height: var(--light-bulb-glow-height);
+}
+
+@keyframes flicker {
+  0% {
+    filter: blur(1px) brightness(1.2);
+  }
+  10% {
+    filter: blur(2px) brightness(1);
+  }
+  20% {
+    filter: blur(3px) brightness(1.25);
+  }
+  30% {
+    filter: blur(4px) brightness(1);
+  }
+  40% {
+    filter: blur(5px) brightness(1.5);
+  }
+  50% {
+    filter: blur(5px) brightness(1.25);
+  }
+  60% {
+    filter: blur(5px) brightness(1);
+  }
+  70% {
+    filter: blur(5px) brightness(1);
+  }
+  80% {
+    filter: blur(5px) brightness(1.1);
+  }
+  90% {
+    filter: blur(5px) brightness(1.2);
+  }
+  100% {
+    filter: blur(5px) brightness(2);
+  }
+}
