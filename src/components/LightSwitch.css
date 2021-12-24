@@ -1,8 +1,3 @@
-:root {
-  --light-bulb-glow-height: 40px;
-  --bulb-yellow: #ffe065;
-}
-
 .light-and-switch-span {
   display: flex;
   flex-direction: column;
@@ -25,57 +20,8 @@
   z-index: 2;
 }
 
-.LightSwitch-off {
-  background-color: #fff;
-  border-radius: 10px;
-  position: relative;
-  text-align: center;
-  line-height: 44px;
-  top: 22px;
-  right: 10px;
-  height: 44px;
-  width: 44px;
-  font-size: 7px;
-  opacity: 70%;
-}
-
-.LightSwitch-off:hover {
-  opacity: 90%;
-}
-
-.LightSwitch-on {
-  background-color: var(--bulb-yellow);
-  border-radius: 10px;
-  position: relative;
-  bottom: 10px;
-  right: 10px;
-  height: 44px;
-  width: 44px;
-  font-size: 7px;
-  opacity: 100%;
-}
-
-.LightSwitch-on:hover {
-  background-color: var(--bulb-yellow);
+.light-switch:hover {
   filter: brightness(1.25);
-}
-
-.light-bulb-glow-on {
-  position: relative;
-  top: 130px;
-  width: 10px;
-  height: var(--light-bulb-glow-height);
-  border-radius: 50%;
-  background-color: #fff;
-  box-shadow: 0 0 60px 30px var(--bulb-yellow),
-    0 0 100px 60px var(--bulb-yellow), 0 0 140px 90px var(--bulb-yellow);
-  filter: blur(5px) brightness(1.5);
-  animation: flicker 0.5s linear;
-  z-index: 3;
-}
-
-.light-bulb-glow-off {
-  height: var(--light-bulb-glow-height);
 }
 
 @keyframes flicker {

@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-import Square from "./components/Square";
-import LightSwitch from "./components/LightSwitch";
 import AddRemove from "./components/AddRemove";
 import "./App.css";
 
