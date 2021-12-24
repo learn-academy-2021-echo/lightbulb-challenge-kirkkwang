@@ -27,7 +27,9 @@ export default class Bulb extends Component {
           onClick={this.props.changeColor}
           style={this.props.index === 0 ? divStyle0 : divStyle1}
           tabIndex={"1"}
-        ></button>
+        >
+          secret button
+        </button>
         {/* this is the tag for the SVG lightbulb files, attributes in the lightBulbFill and vector arrays, which is fill= and d= */}
         <svg
           xmlns="http://www.w3.org/2000/svg"
