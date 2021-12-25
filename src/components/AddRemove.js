@@ -38,7 +38,11 @@ export default class AddRemove extends Component {
           </button>
         </div>
         {/* displays all the LightSwitch components in allLights array */}
-        <div className="multi-bulbs">{this.state.allLights}</div>
+        <div className="multi-bulbs">
+          {this.state.allLights.map((lightSwitch, idx) => (
+            <div key={idx}>{lightSwitch}</div>
+          ))}
+        </div>
       </>
     );
   }
