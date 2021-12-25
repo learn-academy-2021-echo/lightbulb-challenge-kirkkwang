@@ -8,7 +8,9 @@ export default class App extends Component {
       <>
         <h1 className="head">Go Crazy With Lightbulbs!</h1>
         {/* used AddRemove component since everything flows through it */}
-        <AddRemove />
+        <div role="main">
+          <AddRemove />
+        </div>
       </>
     );
   }
