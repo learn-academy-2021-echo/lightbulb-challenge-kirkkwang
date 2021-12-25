@@ -56,31 +56,34 @@ export default class LightSwitch extends Component {
 
     return (
       <>
-        <span className="light-and-switch-span">
+        <div className="BulbSwitch">
           <Bulb
             index={this.state.index}
             changeColor={this.changeColor}
             randomColor={this.state.randomColor}
             lightBulbFill={this.state.lightBulbFill}
           />
-          <div htmlFor="checkbox" className="light-switch-track">
+          <div
+            htmlFor="BulbSwitch__Checkbox"
+            className="BulbSwitch__SwitchTrack"
+          >
             {/* used div instead of label to separate click functionality */}
-            <label htmlFor="checkbox">
+            <label htmlFor="BulbSwitch__Checkbox">
               <input
-                type="checkbox"
-                className="checkbox"
-                id="checkbox"
+                type="BulbSwitch__Checkbox"
+                className="BulbSwitch__Checkbox"
+                id="BulbSwitch__Checkbox"
                 defaultChecked={this.state.index}
                 onChange={this.changeIndex}
               />
             </label>
             <div
               onClick={this.changeIndex}
-              className="light-switch"
+              className="BulbSwitch__Switch"
               style={lightSwitchStyle}
             ></div>
           </div>
-        </span>
+        </div>
       </>
     );
   }
