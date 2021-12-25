@@ -68,7 +68,7 @@ export default class LightSwitch extends Component {
             <label htmlFor="checkbox">
               <input
                 type="checkbox"
-                class="checkbox"
+                className="checkbox"
                 id="checkbox"
                 defaultChecked={this.state.index}
                 onChange={this.changeIndex}

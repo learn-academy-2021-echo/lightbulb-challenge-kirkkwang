@@ -3,7 +3,6 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-bottom: 15px;
 }
 
 .add-bulb,
@@ -11,7 +10,7 @@
   width: 90px;
   height: 60px;
   margin: 3px;
-  font-size: 32px;
+  font-size: 2em;
   background-color: rgb(141, 141, 141);
   border: 0px;
   border-radius: 15px;
