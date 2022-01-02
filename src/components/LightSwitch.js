@@ -16,7 +16,6 @@ export default class LightSwitch extends Component {
       randomColor: "#f1c40f", // this is the random color that is going to be generaterated later, by default it's the yellow color
       index: 0, // to be altered by set state, currently 0 wich means offOn[index] = switch in off position and vector[index] = unlit lightbulb
     };
-    this.changeColor = this.changeColor.bind(this);
   }
 
   // creates hex string randomly to be set as the color
@@ -29,12 +28,7 @@ export default class LightSwitch extends Component {
 
   // sets the state of index to either 0 or 1
   changeIndex = () => {
-    this.setState({
-      index:
-        this.state.index === 0 // if it already equals 0
-          ? (this.state.index = 1) // then change it to 1
-          : (this.state.index = 0), // otherwise change it to 0
-    });
+    this.setState({ index: this.state.index === 0 ? 1 : 0 });
   };
 
   render() {
@@ -63,14 +57,11 @@ export default class LightSwitch extends Component {
             randomColor={this.state.randomColor}
             lightBulbFill={this.state.lightBulbFill}
           />
-          <div
-            htmlFor="BulbSwitch__Checkbox"
-            className="BulbSwitch__SwitchTrack"
-          >
+          <div className="BulbSwitch__SwitchTrack">
             {/* used div instead of label to separate click functionality */}
-            <label htmlFor="BulbSwitch__Checkbox">
+            <label htmlFor="checkbox">
               <input
-                type="BulbSwitch__Checkbox"
+                type="checkbox"
                 className="BulbSwitch__Checkbox"
                 id="BulbSwitch__Checkbox"
                 defaultChecked={this.state.index}
